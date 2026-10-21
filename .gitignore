@@ -10,7 +10,15 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
 *.local
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
 
 # Editor directories and files
 .vscode/*
@@ -23,8 +31,10 @@ dist-ssr
 *.sln
 *.sw?
 
-# Secrets and per-machine Claude settings
+# Local environment (copy from .env.example; values come from the Lovable project)
 .env
 .env.*
 !.env.example
+
+# Per-machine Claude settings
 .claude/settings.local.json
