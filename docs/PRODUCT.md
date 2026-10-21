@@ -1,37 +1,37 @@
 # Gigflow: what we are building
 
-_Fill this in together before writing feature code. Every later decision gets recorded here._
-
 ## One-line pitch
 
-<!-- Gigflow is a ___ for ___ that ___. -->
+Gigflow is a calm booking workspace for independent musicians: know who to pitch, when to follow up, and what to send.
 
 ## Who it is for
 
-<!-- The one or two kinds of people who will use it, and the situation they are in when they open it. -->
+Independent artists and small acts who book their own shows and currently track venues, promoters, and follow-ups in spreadsheets, notes apps, and email threads.
 
-## What v1 does (and does not do)
+## What exists today (from the Lovable build)
 
-### In scope
+- **Gig discovery / opportunities:** save venues and promoters with location, genre fit, contact info, notes; CSV import.
+- **Booking pipeline:** kanban-style stages from saved → pitched → booked.
+- **Outreach logging:** record every email, DM, form, and text per opportunity.
+- **Follow-up reminders:** due today / upcoming / overdue; calendar sync via a public `.ics` feed.
+- **Pitch templates:** reusable outreach messages.
+- **Asset library:** bio, links, tech notes ready to copy.
+- **Public press kit (EPK):** `/epk/<slug>`, no login required.
+- **Auth:** Supabase email/password. **Currently replaced by a usability-testing click-through** that creates a throwaway account on every sign-in click and has confirmation emails switched off. Must be reverted before real users (see issue).
 
-- [ ] 
-- [ ] 
-- [ ] 
-
-### Out of scope for v1
-
-- 
-- 
-
-## Open questions
+## v1 scope decisions still open
 
 | Question | Owner | Decided? |
 | -------- | ----- | -------- |
-| Does v1 need a backend or accounts, or is local-only enough? | | |
-| | | |
+| Keep using Alicia's Lovable Cloud Supabase project, or create a Supabase project we own and recreate the schema? | | |
+| Restore real sign-in now, or keep the click-through prototype for a usability round first? | | |
+| Hosting at gigflow.phoenixtbird.com (recommended) vs phoenixtbird.com/gigflow? | Phoenix | |
+| Which of the Lovable sample content (Juno Halloway press kit, 12 gigs) do we want as seed data? | | |
 
 ## Decisions log
 
 | Date | Decision | Where it was made |
 | ---- | -------- | ----------------- |
-| 2026-10-21 | Vite + React + TypeScript, static site on GitHub Pages at phoenixtbird.com/gigflow | Repo setup |
+| 2026-10-21 | Repo created; two-person PR workflow; Claude conventions in CLAUDE.md | Repo setup |
+| 2026-10-21 | Imported the Lovable "Merge Magic (No Auth)" export as the codebase; Lovable sync not kept | Repo setup |
+| 2026-10-21 | GitHub Pages dropped (app needs a server); Cloudflare Workers is the deploy target | docs/HOSTING.md |
