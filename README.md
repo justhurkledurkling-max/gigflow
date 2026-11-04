@@ -41,7 +41,6 @@ src/components/           App components; src/components/ui/ is shadcn/ui
 src/lib/                  Data access (gigflow.ts, data.ts), server functions (*.functions.ts)
 src/integrations/supabase Supabase clients, auth middleware, generated DB types
 src/server.ts, start.ts   Server entry and TanStack Start middleware
-drizzle/                  Drizzle schema + migrations (currently empty; schema lives in Supabase)
 public/                   Static assets (demo photos, favicon)
 docs/                     Product notes, hosting, contributor docs
 .github/                  CI, deploy workflow, PR template
